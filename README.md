@@ -25,8 +25,8 @@ These values (and in particular the `GOOGLE_CLIENT_SECRET` value) should not be 
 
 ##### Reserved values
 
-##### `FUNCTION_TRIGGER_TYPE`
-This value is set by [some](https://cloud.google.com/functions/docs/env-var#reserved_keys_key_validation) (but not all) Google Cloud hosting platforms. Do **not** set it yourself or change its value.
+##### `FUNCTION_TRIGGER_TYPE` or `FUNCTION_SIGNATURE_TYPE` (depending on runtime/version)
+This value is set by the Google Cloud hosting platform, depending on the runtime in use (see [here](https://cloud.google.com/functions/docs/env-var#reserved_keys_key_validation) for more information). Do **not** set it yourself or change its value.
 
 ##### `GCP_PROJECT_ID`
 This value should be set to your GCP project ID automatically. If it isn't, make sure you do this manually.

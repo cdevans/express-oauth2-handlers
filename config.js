@@ -93,7 +93,7 @@ exports.USER_ID_FORMAT = nconf.get('USER_ID_FORMAT');
 /* Computed values */
 exports.GCP_PROJECT = nconf.get('GCP_PROJECT');
 exports.NEEDS_USER_ID = exports.STORAGE_METHOD === 'datastore';
-const __triggerType = process.env.FUNCTION_TRIGGER_TYPE;
+const __triggerType = process.env.FUNCTION_TRIGGER_TYPE || process.env.FUNCTION_SIGNATURE_TYPE;
 
 exports.IS_HTTP =
   !__triggerType || __triggerType.toLowerCase().includes('http');
